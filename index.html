@@ -1,0 +1,85 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friendship Day for Asmita</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="memories.html">Old Memories</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="message.html">Message</a></li>
+    </ul>
+  </nav> -->
+<nav style="background-color: #dda0dd; padding: 1rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Segoe UI', sans-serif; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+  <div style="font-size: 1.5rem; font-weight: bold; color: white;">💜 Fun And Laugh </div>
+  <div>
+    <a href="index.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Home</a>
+    <a href="memories.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Old Memories</a>
+    <a href="games.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">Games</a>
+    <a href="about.html" style="margin-right: 1rem; text-decoration: none; color: white; font-weight: 500;">About</a>
+    <a href="message.html" style="text-decoration: none; color: white; font-weight: 500;">Message</a>
+  </div>
+</nav>
+
+
+
+  <!-- <section class="video-intro">
+    <video autoplay muted loop>
+      <source src="w" type="video/mp4">
+    </video>
+    <img src="Best-Friends-Forever-Wallpaper.jpg" alt=""> -->
+    <audio autoplay loop>
+      <source src="WhatsApp Audio 2025-08-03 at 04.20.13_7fff55cf.mp3" type="audio/mp3">
+    </audio>
+    <div class="overlay-text">
+      <h1>First Meetings are Weirdly Awesome 😅💖</h1>
+      <p>Click below to unlock a surprise</p>
+      <button onclick="document.querySelector('.secret-letter').style.display='block'">Unlock Letter</button>
+    </div>
+  </section>
+
+  <div class="secret-letter">
+    <div class="letter-box">
+      <h2>Dear Asmita 💌</h2>
+      <p>Ever met someone new and immediately forgot their name? Welcome to the club. This page is all about that awkward, funny, aesthetic energy of random new connections and "oh we met before?" moments. 🎉</p>
+    </div>
+  </div>
+
+  <script src="effects.js"></script>
+  <script>
+  document.querySelector("button").addEventListener("click", function (e) {
+    e.preventDefault(); // prevent actual form submission
+
+    // Create falling element
+    const emoji = document.createElement("div");
+    emoji.innerText = "💖"; // you can change to 🌸 or 🌼
+    emoji.style.position = "fixed";
+    emoji.style.top = "-50px";
+    emoji.style.left = Math.random() * 90 + "vw";
+    emoji.style.fontSize = "2rem";
+    emoji.style.zIndex = 9999;
+    emoji.style.transition = "top 2s ease-out, opacity 2s ease-out";
+
+    document.body.appendChild(emoji);
+
+    setTimeout(() => {
+      emoji.style.top = "100vh";
+      emoji.style.opacity = 0;
+    }, 100);
+
+    // Remove after animation
+    setTimeout(() => {
+      emoji.remove();
+    }, 2200);
+  });
+</script>
+
+</body>
+</html>
